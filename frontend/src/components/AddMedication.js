@@ -18,7 +18,7 @@ function AddMedication({ userId, onAdded }) {
     setName('');
     setDosage('');
     setFrequency('');
-    onAdded(); // 🔑 notify parent to re-fetch
+    onAdded();
   };
 
   return (

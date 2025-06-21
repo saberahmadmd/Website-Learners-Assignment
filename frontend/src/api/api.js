@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: "https://website-learners-assignment-mnl8.onrender.com/api",
+  baseURL: process.env.REACT_APP_API_URL,
   withCredentials: true,
 });
 

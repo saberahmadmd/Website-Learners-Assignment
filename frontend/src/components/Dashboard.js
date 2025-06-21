@@ -11,17 +11,15 @@ function Dashboard() {
   const navigate = useNavigate();
   const [reloadFlag, setReloadFlag] = useState(0);
 
-  // ✅ PROTECT ROUTE:
   useEffect(() => {
     if (!user) {
-      // Not logged in? Force redirect to login
       navigate('/login', { replace: true });
     }
   }, [user, navigate]);
 
   const handleLogout = () => {
     setUser(null);     // Clear user
-    navigate('/login', { replace: true }); // Replace history so back won't re-open dashboard
+    navigate('/login', { replace: true });
   };
 
   if (!user) return <p>Please login first.</p>;

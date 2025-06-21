@@ -16,11 +16,10 @@ function MedicationList({ userId, reloadFlag }) {
     };
 
     fetchMedications();
-  }, [userId, reloadFlag]); // ✅ clean!
+  }, [userId, reloadFlag]); 
 
   const handleMarkAsTaken = async (id) => {
     await markAsTaken(id);
-    // 👇 manual reload:
     const data = await getMedications(userId);
     setMedications(data);
   };

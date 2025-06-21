@@ -1,0 +1,68 @@
+
+.medication-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.medication-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.medication-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.taken-status {
+  margin-left: 10px;
+  padding: 4px 8px;
+  background: #3498db;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.mark-button {
+  padding: 6px 12px;
+  background: #2ecc71;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mark-button:hover {
+  background: #27ae60;
+}
+
+.delete-button {
+  padding: 6px 12px;
+  background: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-button:hover {
+  background: #c0392b;
+}

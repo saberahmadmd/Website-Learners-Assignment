@@ -20,15 +20,7 @@ db.serialize(() => {
        userId INTEGER
     )  
   `)
-   /*
-     db.run(`
-        CREATE TABLE IF NOT EXISTS medication_logs(
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          medicationId INTEGER,
-          date_taken DATE
-        )  
-     `)
-     */
+
    db.run(`
   CREATE TABLE IF NOT EXISTS medication_logs(
     id INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -7,10 +7,18 @@ const medicationRoutes = require('./routes/medications')
 dotenv.config()
 
 const app = express()
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://website-learners-assignment-delta.vercel.app/',
+  'https://website-learners-assignment-git-main-md-saber-ahmads-projects.vercel.app/',
+  'https://website-learners-assignment-md-saber-ahmads-projects.vercel.app/',
+  'https://vercel.com/md-saber-ahmads-projects/website-learners-assignment/AdNYivT5AqzthMFhnGLpUowz4VQ6'
+];
+
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: allowedOrigins,
   credentials: true,
-}))
+}));
 
 app.use(express.json())
 

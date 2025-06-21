@@ -6,7 +6,7 @@ const API = axios.create({
 });
 
 export const getMedications = async (userId) => {
-  console.log('Fetching medications for userId:', userId); // ✅ Add log!
+  console.log('Fetching medications for userId:', userId);
   const res = await API.get('/medications', {
     params: { userId }
   });
@@ -18,9 +18,8 @@ export const addMedication = async (medication) => {
   return res.data;
 };
 
-// ✅ In frontend/src/api/api.js
 export const markAsTaken = async (id) => {
-  console.log('Calling markAsTaken for ID:', id); // ✅ Add this!
+  console.log('Calling markAsTaken for ID:', id);
   const res = await API.put(`/medications/${id}/taken`);
   return res.data;
 };
